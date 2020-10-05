@@ -1,1 +1,11 @@
---disable trailingCommas, wrapMultilineStatementBraces
+# format options
+
+--classthreshold 1
+--structthreshold 1
+--enumthreshold 1
+
+# rules
+
+--disable trailingCommas
+--disable wrapMultilineStatementBraces
+--disable blankLinesAtStartOfScope

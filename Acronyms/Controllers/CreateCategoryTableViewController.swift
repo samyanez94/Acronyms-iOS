@@ -8,6 +8,7 @@
 import UIKit
 
 class CreateCategoryTableViewController: UITableViewController {
+
     // MARK: - IBOutlets
 
     @IBOutlet var nameTextField: UITextField!

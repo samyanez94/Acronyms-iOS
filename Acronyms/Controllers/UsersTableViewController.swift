@@ -8,6 +8,7 @@
 import UIKit
 
 class UsersTableViewController: UITableViewController {
+
     // MARK: - Properties
 
     var users: [User] = []

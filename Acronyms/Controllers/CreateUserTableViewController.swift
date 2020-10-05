@@ -8,9 +8,11 @@
 import UIKit
 
 class CreateUserTableViewController: UITableViewController {
+
     // MARK: - IBOutlets
 
     @IBOutlet var nameTextField: UITextField!
+
     @IBOutlet var usernameTextField: UITextField!
 
     // MARK: - View Life Cycle
@@ -27,6 +29,27 @@ class CreateUserTableViewController: UITableViewController {
     }
 
     @IBAction func save(_: Any) {
-        navigationController?.popViewController(animated: true)
+        guard let name = nameTextField.text,
+            !name.isEmpty else {
+            ErrorPresenter.showError(message: "You must specify a name", on: self)
+            return
+        }
+        guard let username = usernameTextField.text,
+            !username.isEmpty else {
+            ErrorPresenter.showError(message: "You must specify a username", on: self)
+            return
+        }
+        let user = User(name: name, username: username)
+        ResourceRequest<User>(resourcePath: "users").save(user) { [weak self] result in
+            switch result {
+            case .failure:
+                let message = "There was a problem saving the user"
+                ErrorPresenter.showError(message: message, on: self)
+            case .success:
+                DispatchQueue.main.async { [weak self] in
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
     }
 }

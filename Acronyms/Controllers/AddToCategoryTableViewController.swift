@@ -8,6 +8,7 @@
 import UIKit
 
 class AddToCategoryTableViewController: UITableViewController {
+
     // MARK: - Properties
 
     private var categories: [Category] = []

@@ -10,7 +10,7 @@ import Foundation
 struct CreateAcronymData: Codable {
     let short: String
     let long: String
-    let userID: UUID
+    let userId: UUID
 }
 
 extension Acronym {
@@ -18,7 +18,7 @@ extension Acronym {
         CreateAcronymData(
             short: short,
             long: long,
-            userID: user.id
+            userId: user.id
         )
     }
 }

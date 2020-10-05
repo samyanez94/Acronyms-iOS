@@ -8,6 +8,7 @@
 import UIKit
 
 class AcronymDetailTableViewController: UITableViewController {
+
     // MARK: - Properties
 
     var acronym: Acronym {
