@@ -10,6 +10,10 @@ import UIKit
 class AcronymsTableViewController: UITableViewController {
     // MARK: - Properties
 
+    var acronyms: [Acronym] = []
+
+    let acronymsRequest = ResourceRequest<Acronym>(resourcePath: "acronyms")
+
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -32,8 +36,23 @@ class AcronymsTableViewController: UITableViewController {
     // MARK: - IBActions
 
     @IBAction func refresh(_ sender: UIRefreshControl?) {
-        DispatchQueue.main.async {
-            sender?.endRefreshing()
+        acronymsRequest.getAll { [weak self] acronymResult in
+            DispatchQueue.main.async {
+                sender?.endRefreshing()
+            }
+            switch acronymResult {
+            case .failure:
+                ErrorPresenter.showError(
+                    message: "There was an error getting the acronyms",
+                    on: self
+                )
+            case let .success(acronyms):
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.acronyms = acronyms
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
 }
@@ -42,11 +61,16 @@ class AcronymsTableViewController: UITableViewController {
 
 extension AcronymsTableViewController {
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 1
+        acronyms.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AcronymCell", for: indexPath)
+        let acronym = acronyms[indexPath.row]
+
+        cell.textLabel?.text = acronym.short
+        cell.detailTextLabel?.text = acronym.long
+
         return cell
     }
 }

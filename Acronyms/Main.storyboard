@@ -436,7 +436,7 @@
         <scene sceneID="zg0-hm-eUu">
             <objects>
                 <navigationController id="eJt-cq-Pr3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" image="users-tab" selectedImage="users-tab" id="5Cq-0t-BbE"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="users-tab-icon" selectedImage="users-tab-icon" id="5Cq-0t-BbE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="TTd-qQ-51K">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -564,7 +564,7 @@
         <scene sceneID="gm4-hc-5NR">
             <objects>
                 <navigationController id="EIk-pz-DdI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categories" image="tags-tab" selectedImage="tags-tab" id="nmc-eF-TEq"/>
+                    <tabBarItem key="tabBarItem" title="Categories" image="tags-tab-icon" selectedImage="tags-tab-icon" id="nmc-eF-TEq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Gqo-UY-1Fk">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -581,7 +581,7 @@
         <scene sceneID="W5W-Dl-O0j">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HcO-ub-log" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Acronyms" image="acronyms-tab" selectedImage="acronyms-tab" id="3Ww-Hx-Z92"/>
+                    <tabBarItem key="tabBarItem" title="Acronyms" image="acronyms-tab-icon" selectedImage="acronyms-tab-icon" id="3Ww-Hx-Z92"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="KE0-t1-VED">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -636,12 +636,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eki-wl-pDS"/>
+        <segue reference="Ioc-gK-VfW"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="acronyms-tab" width="22.5" height="22"/>
-        <image name="tags-tab" width="20.5" height="20.5"/>
-        <image name="users-tab" width="21" height="18.5"/>
+        <image name="acronyms-tab-icon" width="22.5" height="22"/>
+        <image name="tags-tab-icon" width="20.5" height="20.5"/>
+        <image name="users-tab-icon" width="21" height="18.5"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

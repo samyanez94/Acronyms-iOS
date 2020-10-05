@@ -29,6 +29,7 @@
 		2224DEFC252A8E5A00272CF5 /* ResourceRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224DEF9252A8E5A00272CF5 /* ResourceRequestError.swift */; };
 		2224DEFD252A8E5A00272CF5 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224DEFA252A8E5A00272CF5 /* ErrorPresenter.swift */; };
 		2224DF01252A949700272CF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2224DF00252A949700272CF5 /* Main.storyboard */; };
+		2224DF04252A987F00272CF5 /* ResourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224DF03252A987F00272CF5 /* ResourceRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		2224DEF9252A8E5A00272CF5 /* ResourceRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceRequestError.swift; sourceTree = "<group>"; };
 		2224DEFA252A8E5A00272CF5 /* ErrorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 		2224DF00252A949700272CF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2224DF03252A987F00272CF5 /* ResourceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,16 +90,16 @@
 		2224DE99252A865F00272CF5 /* Acronyms */ = {
 			isa = PBXGroup;
 			children = (
-				2224DEF7252A8E4A00272CF5 /* Utilities */,
-				2224DEED252A879C00272CF5 /* Models */,
-				2224DED9252A875900272CF5 /* Controllers */,
+				2224DEA8252A866100272CF5 /* Info.plist */,
+				2224DF00252A949700272CF5 /* Main.storyboard */,
 				2224DE9A252A865F00272CF5 /* AppDelegate.swift */,
 				2224DE9C252A865F00272CF5 /* SceneDelegate.swift */,
 				2224DE9E252A865F00272CF5 /* ViewController.swift */,
-				2224DF00252A949700272CF5 /* Main.storyboard */,
-				2224DEA5252A866100272CF5 /* LaunchScreen.storyboard */,
 				2224DEA3252A866100272CF5 /* Assets.xcassets */,
-				2224DEA8252A866100272CF5 /* Info.plist */,
+				2224DEA5252A866100272CF5 /* LaunchScreen.storyboard */,
+				2224DED9252A875900272CF5 /* Controllers */,
+				2224DEED252A879C00272CF5 /* Models */,
+				2224DEF7252A8E4A00272CF5 /* Utilities */,
 			);
 			path = Acronyms;
 			sourceTree = "<group>";
@@ -134,6 +136,7 @@
 			children = (
 				2224DEF8252A8E5A00272CF5 /* AddToCategoryError.swift */,
 				2224DEFA252A8E5A00272CF5 /* ErrorPresenter.swift */,
+				2224DF03252A987F00272CF5 /* ResourceRequest.swift */,
 				2224DEF9252A8E5A00272CF5 /* ResourceRequestError.swift */,
 			);
 			path = Utilities;
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2224DEF2252A87AC00272CF5 /* User.swift in Sources */,
+				2224DF04252A987F00272CF5 /* ResourceRequest.swift in Sources */,
 				2224DEF4252A87AC00272CF5 /* Acronym.swift in Sources */,
 				2224DEFB252A8E5A00272CF5 /* AddToCategoryError.swift in Sources */,
 				2224DEE7252A877B00272CF5 /* CreateUserTableViewController.swift in Sources */,
